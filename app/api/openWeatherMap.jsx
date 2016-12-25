@@ -14,8 +14,8 @@ module.exports = {
         console.log(res);
         return res.data;
       }
-    }, function(res){
-      throw new Error(res.data.message);
+    }, function(err){
+      throw new Error(err.response.data.message);
     })
   }
 }
